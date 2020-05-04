@@ -32,11 +32,11 @@ public static class GameStatus
         };
         RegionEnableStatus = new Dictionary<string, bool>
         {
-            ["SE"] = false,
-            ["NE"] = false,
+            ["SE"] = true,
+            ["NE"] = true,
             ["C"] = true,
-            ["NW"] = false,
-            ["SW"] = false
+            ["NW"] = true,
+            ["SW"] = true
         };
         LevelTriedCount = LevelTriedCount = 0;
     }
@@ -94,6 +94,7 @@ public static class GameStatus
         return LevelSuccssCount;
     }
 
+<<<<<<< HEAD:Assets/Scripts/Map/GameStatus.cs
     public static void InvokeSuccess(Scene _, LoadSceneMode __)
     {
         OnLevelSuccess.Invoke();
@@ -103,5 +104,10 @@ public static class GameStatus
     {
         OnLevelFail.Invoke();
         SceneManager.sceneLoaded -= InvokeFail;
+=======
+    public static string GetLastInfectedRegion()//
+    {
+        return LastInfectedRegion;
+>>>>>>> 44abc8a2f55707781e1f1627670738332218c5d6:Assets/Scripts/GameStatus.cs
     }
 }
